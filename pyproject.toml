@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "8t-daw"
+version = "0.1.0"
+description = "8T: 8 Track DAW - a beginner-friendly eight-track recorder"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.2,<3",
+    "PySide6>=6.10,<7",
+    "sounddevice>=0.5,<1",
+    "soundfile>=0.13,<1",
+    "scipy>=1.15,<2",
+    "pedalboard>=0.9.25,<0.10",
+]
+
+[project.scripts]
+8t = "eighttrack.ui:main"
+
+[tool.setuptools.packages.find]
+include = ["eighttrack*"]
